@@ -1,0 +1,162 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.firebase.firebase-perf'
+    id 'com.github.johnrengelman.shadow'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.ls.awajimatradeeder"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            multiDexEnabled true
+            debug {
+                resValue("string", "DB_PASSWORD_DATABASE_NAME", "password")
+            }
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        pickFirst 'META-INF/AL2.0'
+        pickFirst 'META-INF/LGPL2.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding false
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.hannesdorfmann.mosby3:viewstate:3.1.1'
+    implementation 'com.facebook.android:facebook-login:11.1.0'
+    implementation 'com.facebook.android:facebook-android-sdk:11.1.0'
+    implementation 'com.facebook.android:audience-network-sdk:5.11.0'
+    //implementation 'com.hannesdorfmann.mosby3:mvi:3.1.1'
+    //implementation 'com.scaledrone:scaledrone-java:0.6.0'
+    implementation 'com.mikepenz:materialdrawer:8.4.2'
+    implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.4'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    //implementation 'androidx.preference:preference:1.2.0'
+    implementation 'com.rom4ek:arcnavigationview:2.0.0'
+    implementation 'com.mig35:carousellayoutmanager:1.4.6'
+    implementation 'com.github.matthiasrobbers:shortbread:1.4.0'
+    implementation 'io.paperdb:paperdb:2.6'
+    implementation 'com.github.florent37:shapeofview:1.3.2'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.huang.rippleview:rippleview:1.0.1'
+    implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.1'
+    implementation 'com.shuhart.stepview:stepview:1.5.0'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    implementation group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+    //implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+    implementation ('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        // Exclude is only needed if you already have
+        // androidx.appcompat as a dependency in your app.
+        //exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+    implementation 'com.github.mzule.fantasyslide:library:1.0.5'
+    //implementation 'com.github.Flutterwave:rave-android:1.0.49.1'
+    //implementation 'com.github.Flutterwave.rave-android:rave_presentation:2.1.38'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.jd-alexander:library:1.1.0'
+    implementation 'com.klinkerapps:android-smsmms:5.2.6'
+    implementation 'com.wang.avi:library:1.0.5'
+    implementation 'com.rom4ek:arcnavigationview:2.0.0'
+    implementation 'com.mig35:carousellayoutmanager:1.4.6'
+    implementation 'co.paystack.android:paystack:3.1.3'
+
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.github.bumptech.glide:annotations:4.12.0'
+
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.12.0') {
+        exclude group: 'glide-parent'
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    //implementation 'com.hbb20:ccp:X.Y.Z'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.41'
+
+    implementation 'ch.acra:acra:4.11.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'com.mikepenz:materialdrawer:8.4.2'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.bignerdranch.android:recyclerview-multiselect:0.2'
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+    implementation 'org.apache.httpcomponents.core5:httpcore5:5.2-beta1'
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+
+    dependencies {
+        implementation 'com.github.clans:fab:1.6.4'
+    }
+
+
+    implementation 'com.wang.avi:library:1.0.5'
+
+    implementation 'com.github.jd-alexander:library:1.1.0'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    implementation 'net.steamcrafted:materialiconlib:1.0.8'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.klinkerapps:android-smsmms:5.2.6'
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.mikhaellopez:circularimageview:4.3.0'
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'me.imid.swipebacklayout.lib:library:1.0.0'
+    implementation 'org.slf4j:slf4j-simple:1.6.1'
+
+    //implementation group: "com.twilio.sdk", name: "twilio", version: "8.29.0"
+    //implementation group: "com.twilio.sdk", name: "twilio", version: '8.25.0'
+    implementation group: "com.twilio.sdk", name: "twilio", version: '8.22.0'
+
+
+
+
+
+
+}

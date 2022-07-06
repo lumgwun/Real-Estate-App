@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Membership.MembershipAct">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mQualifyTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:background="@null"
+            android:text="You will qualify for a Loan after 3 Months " />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gOfC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:focusable="false"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:background="@null"
+        android:text="Select Your membership Type" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mQMoreTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:background="@null"
+            android:text="The higher Your Membership Level, the higher the Loan Amount that you can collect " />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/mTypeSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:paddingLeft="50dp"
+            android:hint="Membership Type"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:entries="@array/MembershipType"
+            android:padding="30dp"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical|start"
+            android:gravity="center_vertical|start"
+            android:clickable="false" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:focusable="false"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:background="@null"
+        android:text="USD 1 " />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mAmountEquiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:background="@null"
+            android:text="Equivalent to: " />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mAmountInNGN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:background="@null"
+            android:text="NGN500 " />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/idBtnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:textSize="20sp"
+            android:onClick="membershipNext"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/fab_shadow"
+            android:text="Next"
+            android:textAllCaps="false" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
