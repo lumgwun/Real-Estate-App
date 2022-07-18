@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:itemTextAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single"
+        android:menuCategory="system">
+        <item
+            android:id="@+id/gen_dashboard"
+            android:icon="@drawable/home_fg"
+            android:title="User Dashboard" />
+
+
+        <item
+            android:id="@+id/all_timelines"
+            android:icon="@drawable/icon5_fg"
+            android:title="All Timeline" />
+
+        <item
+            android:id="@+id/all_job_board"
+            android:icon="@drawable/icon5_fg"
+            android:title="My Job Board" />
+        <item
+            android:id="@+id/all_properties"
+            android:icon="@drawable/icon5_fg"
+            android:title="My Properties" />
+        <item
+            android:id="@+id/all_delivery"
+            android:icon="@drawable/icon5_fg"
+            android:title="My Logistics" />
+
+
+        <item android:title="Finance">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/all_sub"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="My Subscriptions" />
+                    <item
+                        android:id="@+id/all_transfers"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="My Transfers" />
+                    <item
+                        android:id="@+id/all_so"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="MY Standing Orders" />
+
+                    <item
+                        android:id="@+id/all_Grp_Savings"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="MY Group Savings" />
+
+
+                </group>
+            </menu>
+
+        </item>
+
+        <item android:title="Messaging">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/all_chat"
+                        android:icon="@drawable/chat_fg"
+                        android:title="My Chats" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Estate Properties">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/all_prop"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="My Properties" />
+
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Market Area">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/all_supplies"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="All Supplies" />
+
+                    <item
+                        android:id="@+id/my_supplies"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="My Supplies" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Estate Elections Area">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/est_elections"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Elections" />
+
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Log Settings">
+            <menu>
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/est_logout"
+                        android:icon="@drawable/selector"
+                        android:title="Logout" />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>

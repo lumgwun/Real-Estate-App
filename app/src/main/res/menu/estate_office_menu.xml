@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:itemTextAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single"
+        android:menuCategory="system">
+        <item
+            android:id="@+id/nav_estateBO"
+            android:icon="@drawable/home_fg"
+            android:title="Estate Back Office" />
+
+        <item
+            android:id="@+id/estate_admin"
+            android:icon="@drawable/icon5_fg"
+            android:title="Estate Admin" />
+
+        <item
+            android:id="@+id/estate_timelines"
+            android:icon="@drawable/icon5_fg"
+            android:title="Estate Timeline" />
+
+        <item
+            android:id="@+id/estate_user_creator"
+            android:icon="@drawable/icon5_fg"
+            android:title="Estate Users Creator" />
+        <item
+            android:id="@+id/est_emergency"
+            android:icon="@drawable/icon5_fg"
+            android:title="Emergencies" />
+        <item
+            android:id="@+id/est_visitation"
+            android:icon="@drawable/icon5_fg"
+            android:title="Visitations" />
+
+
+        <item android:title="Finance">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/estate_finance2"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Finance" />
+                    <item
+                        android:id="@+id/est_Sub"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Subscription" />
+                    <item
+                        android:id="@+id/est_Grp_Savings"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Group Savings" />
+                    <item
+                        android:id="@+id/est_loan"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Loan Services" />
+
+
+                </group>
+            </menu>
+
+        </item>
+
+        <item android:title="Messaging">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/est_chat1"
+                        android:icon="@drawable/chat_fg"
+                        android:title="Estate Chat" />
+
+                    <item
+                        android:id="@+id/est_meetings"
+                        android:icon="@drawable/chat_fg"
+                        android:title="Estate Meetings" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Market Area">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/est_supplies"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Supplies" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Estate Elections Area">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/est_elections"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Elections" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Log Settings">
+            <menu>
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/est_logout"
+                        android:icon="@drawable/selector"
+                        android:title="Logout" />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>

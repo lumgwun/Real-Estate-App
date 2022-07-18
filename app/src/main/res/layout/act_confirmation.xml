@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+    android:scrollbarSize="20dp"
+    android:background="@drawable/estate8"
+    tools:context="com.ls.awajimatradeeder.ConfirmationAct">
+
+
+    <TextView
+        android:id="@+id/h_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/rect6b"
+        android:textColor="@color/purple_new"
+        android:text="For Real Estate Management,Membership Loans,and Trade Management"
+        android:fontFamily="serif"
+        android:padding="20dp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp"
+        android:fontFamily="monospace"
+        android:padding="30dp"
+        android:textSize="17sp"
+        android:background="@drawable/rect_their4"
+        android:textColor="@color/purple_new"
+        android:text="Please note that this is a Financial application for people that are 18 years of age and over."
+        android:textAlignment="center"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:fontFamily="monospace"
+        android:text="Please confirm below"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:buttonTint="@color/black"
+        android:checked="false"
+        android:padding="20dp"
+        android:fontFamily="monospace"
+        android:background="@drawable/rect6d"
+        android:text="I am 18 years or over."
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorLink="@android:color/black"
+        android:textStyle="bold" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmB"
+            android:background="@drawable/rect6b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="monospace"
+            android:text="Click to Continue"
+            android:padding="20dp"
+            android:textColor="@color/purple_new"
+            android:layout_marginBottom="50dp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:padding="30dp"
+        android:background="@drawable/rect_their4"
+        android:textColor="@color/purple_new"
+        android:text="LS Coop.® is a Membership Org. By using this App, you give the Org. The permission to use your personal data. Proceeding into this app underage will have no effect on the Org if you use it wrongly.   "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+</RelativeLayout>

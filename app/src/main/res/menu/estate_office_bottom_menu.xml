@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/estateHome"
+        android:title="Estate Home"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/estate_finance"
+        android:title="Estate Finance"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/est_NullP"
+        android:title="" />
+    <item
+        android:id="@+id/estate_chat"
+        android:title="Estate Chat"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/estate_admin"
+        android:title="Estate Admin Functions"
+        android:icon="@drawable/new_fg"/>
+
+</menu>

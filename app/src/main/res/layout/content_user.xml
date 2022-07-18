@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="840dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_rect_7"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ls.awajimatradeeder.UserDashBoard"
+    tools:showIn="@layout/app_bar_user">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/allPropTxt"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="My Location Properties"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allPropRecycler"
+        android:layout_width="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myEstVacantProp"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="My Estate Vacant Property"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myEstCardRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/yellow6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/myEstRecycler"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/allMarketSelling"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="All Wholesales"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_wholeSale"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#ffae19"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/wholeSaleRecycler"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myWeeklyTrades"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="My Weekly Trades"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRecylerV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#ffae19"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/weeklyTradeRecycler"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/allLoans"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="My Loans"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRecyLoans"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/yellow6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recylerVLoans"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/allJobs"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="All Estate Jobs"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRecylerVJob"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_rowWeight="1"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/yellow6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recylerVJob"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#42C0FB"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/profileTradings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Trading"
+                        android:onClick="profileTrading"
+                        android:background="#42C0FB"
+                        android:textColor="#ffff"/>
+
+                    <Button
+                        android:id="@+id/profileLoans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="My Loans"
+                        android:onClick="profileLoans"
+                        android:background="#42C0FB"
+                        android:textColor="#ffff"/>
+
+                    <Button
+                        android:id="@+id/profileGrpSavings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#42C0FB"
+                        android:layout_weight="1"
+                        android:onClick="profileGrpSavings"
+                        android:text="My Group Savings"
+                        android:textColor="#ffff"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

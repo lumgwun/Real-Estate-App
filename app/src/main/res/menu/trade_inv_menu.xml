@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tradeeHome"
+        android:title="Trade Investor Home"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/my_weeklyTrade"
+        android:title="Weekly Trades"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/my_Null"
+        android:title="" />
+    <item
+        android:id="@+id/my_withdrawals"
+        android:title="Profit Withdrawals"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/tradeTranx"
+        android:title="Transactions"
+        android:icon="@drawable/new_fg"/>
+
+</menu>

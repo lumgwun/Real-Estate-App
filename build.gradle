@@ -4,11 +4,18 @@ buildscript {
         google()
         mavenCentral()
         mavenLocal()
+        maven {
+            url "https://maven.java.net/content/groups/public/"
+        }
 
         maven { url "https://jcenter.bintray.com" }
         //jcenter()
         maven { url 'https://maven.fabric.io/public'
         }
+        maven {
+            url "https://maven.java.net/content/groups/public/"
+        }
+
         maven {
             url "https://maven.springframework.org/release"
         }
@@ -27,13 +34,16 @@ buildscript {
             url 'https://github.com/suckgamony/RapidDecoder/raw/master/repository'
         }
         maven {
+            url "https://repo.maven.apache.org/maven2"
+        }
+        maven {
             url "https://repo.spring.io/release"
         }
         maven {
-            url "https://repository.jboss.org/maven2"
+            url "https://repository.jboss.org/maven2/"
         }
         maven {
-            url 'https://repo.example.com/maven2'
+            url 'https://repo.example.com/maven2/'
         }
         maven {
             url 'file://local/repo/'
@@ -41,9 +51,23 @@ buildscript {
         ivy {
             url 'https://repo.example.com/ivy'
         }
-        maven { url "https://dl.google.com/dl/android/maven2/" }
-        //maven { url "http://jcenter.bintray.com/" }
+        maven { url "https://dl.google.com/dl/android/maven2/"
+        }
+
+        maven { url 'https://repo1.maven.org/maven2' }
         maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    ext {
+        retrofit_version = '2.5.0'
+        retrofit2_version = "2.5.0"
+        //okhttp3_version = "4.9.0"
+        //picassoVersion = "2.71828"
+        //lifecycle_version = "2.4.0"
+        //barcode_scanner_version = "16.1.1"
+        //camerax_version = "1.0.0"
+        //camera_view_version = "1.0.0-alpha22"
+        //stripe_version = "19.0.0"
+        room_version = "2.3.0"
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.2"
@@ -57,7 +81,7 @@ buildscript {
         classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.4.10.2'
         classpath 'com.github.matthiasrobbers:shortbread-gradle-plugin:1.4.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
         classpath 'com.google.firebase:perf-plugin:1.4.1'
         classpath ('com.google.firebase:perf-plugin:1.4.1') {
             exclude group: 'com.google.guava', module: 'guava-jdk5'
@@ -72,10 +96,12 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://jitpack.io' }
         google()
         mavenCentral()
         //noinspection JcenterRepositoryObsolete
-        jcenter() // Warning: this repository is going to shut down soon
+        jcenter()
+
     }
 }
 

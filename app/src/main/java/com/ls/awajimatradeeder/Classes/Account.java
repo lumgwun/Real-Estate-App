@@ -1,7 +1,11 @@
 package com.ls.awajimatradeeder.Classes;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.ls.awajimatradeeder.Database.DBHelper;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Currency;
@@ -13,7 +17,7 @@ import static com.ls.awajimatradeeder.Classes.TradeInvestor.TRADEE_TABLE;
 import static com.ls.awajimatradeeder.Classes.Transaction.TRANSACTIONS_TABLE;
 import static com.ls.awajimatradeeder.Classes.Transaction.TRANSACTION_ID;
 
-public class Account {
+public class Account implements Serializable, Parcelable {
     public static final String ACCOUNTS_TABLE = "accounts";
     public static final String ACCOUNT_BANK = "account_bank";
     public static final String ACCOUNT_NO = "a_id";
@@ -30,23 +34,24 @@ public class Account {
     public static final String ACCOUNT_TYPE_NO_F = "acct_F_Key";
     public static final String ACCOUNT_PROF_ID = "acct_prof_number";
     public static final String ACCOUNT_TX_ID = "acct_TX_ID";
+    public static final String ACCOUNT_IBAN = "acct_Iban";
 
 
     public static final String CREATE_ACCOUNT_TYPE_TABLE = "CREATE TABLE " + ACCOUNT_TYPES_TABLE + " (" + ACCOUNT_TYPE_ID + " INTEGER, " +
-            ACCOUNT_TYPE_NO_F + " INTEGER, " + ACCOUNT_TYPE + " TEXT , " + ACCOUNT_TYPE_INTEREST + " FLOAT , " +
+            ACCOUNT_TYPE_NO_F + " INTEGER, " + ACCOUNT_TYPE + " TEXT , " + ACCOUNT_TYPE_INTEREST + " REAL , " +
             "PRIMARY KEY(" + ACCOUNT_TYPE_ID + "), " + "FOREIGN KEY(" + ACCOUNT_TYPE_NO_F + ") REFERENCES " + ACCOUNTS_TABLE + "(" + ACCOUNT_NO + "))";
 
 
     public static final String CREATE_ACCOUNTS_TABLE = "CREATE TABLE IF NOT EXISTS " + ACCOUNTS_TABLE + " (" + ACCOUNT_NO + " INTEGER , " + BANK_ACCT_NO + "TEXT," + ACCOUNT_PROF_ID + " INTEGER , " +
             ACCOUNT_TRADEE_ID + " INTEGER , " + ACCOUNT_TX_ID + " INTEGER , " +
-            ACCOUNT_TYPE + " TEXT , " + ACCOUNT_BANK + " TEXT , " + ACCOUNT_NAME + " TEXT, " + ACCOUNT_BALANCE + " FLOAT, "  + BANK_ACCT_BALANCE + "FLOAT, "+"FOREIGN KEY(" + ACCOUNT_PROF_ID  + ") REFERENCES " + PROFILES_TABLE + "(" + PROFILE_ID + ")," +"FOREIGN KEY(" + ACCOUNT_TRADEE_ID + ") REFERENCES " + TRADEE_TABLE + "(" + TRADEE_ID + ")," + "FOREIGN KEY(" + ACCOUNT_TX_ID + ") REFERENCES " + TRANSACTIONS_TABLE + "(" + TRANSACTION_ID + ")," +
+            ACCOUNT_TYPE + " TEXT , " + ACCOUNT_BANK + " TEXT , " + ACCOUNT_NAME + " TEXT, " + ACCOUNT_BALANCE + " REAL, "  + BANK_ACCT_BALANCE + "REAL, "+ ACCOUNT_IBAN + "REAL, "+"FOREIGN KEY(" + ACCOUNT_PROF_ID  + ") REFERENCES " + PROFILES_TABLE + "(" + PROFILE_ID + ")," +"FOREIGN KEY(" + ACCOUNT_TRADEE_ID + ") REFERENCES " + TRADEE_TABLE + "(" + TRADEE_ID + ")," + "FOREIGN KEY(" + ACCOUNT_TX_ID + ") REFERENCES " + TRANSACTIONS_TABLE + "(" + TRANSACTION_ID + ")," +
             "PRIMARY KEY(" + ACCOUNT_NO + "))";
 
-    private int skyLightAcctNo =100321;
-
+    private int actEWalletNo =100321;
     private String acct_BankNo;
     private String accountBankBalance;
     private String accountBank;
+    private String accountIBAN;
     private double accountBalance;
     private int accountProfID;
     private int accountTradeeID;
@@ -68,6 +73,42 @@ public class Account {
 
     public Account(){
         super();
+
+    }
+
+    protected Account(Parcel in) {
+        actEWalletNo = in.readInt();
+        acct_BankNo = in.readString();
+        accountBankBalance = in.readString();
+        accountBank = in.readString();
+        accountBalance = in.readDouble();
+        accountProfID = in.readInt();
+        accountTradeeID = in.readInt();
+        accountName = in.readString();
+        transaction = in.readParcelable(Transaction.class.getClassLoader());
+        interest = in.readDouble();
+        image = in.readString();
+        transactions = in.createTypedArrayList(Transaction.CREATOR);
+        id_For_BigDecimal = in.readInt();
+        type_BigDecimal = in.readInt();
+    }
+
+    public static final Creator<Account> CREATOR = new Creator<Account>() {
+        @Override
+        public Account createFromParcel(Parcel in) {
+            return new Account(in);
+        }
+
+        @Override
+        public Account[] newArray(int size) {
+            return new Account[size];
+        }
+    };
+    public Account(int profileID, String accountName, int actEWalletNo, double accountBalance) {
+        this.accountProfID = profileID;
+        this.accountName = accountName;
+        this.actEWalletNo = actEWalletNo;
+        this.accountBalance = accountBalance;
 
     }
 
@@ -103,6 +144,14 @@ public class Account {
         this.accountTradeeID = accountTradeeID;
     }
 
+    public int getActEWalletNo() {
+        return actEWalletNo;
+    }
+
+    public void setActEWalletNo(int actEWalletNo1) {
+        this.actEWalletNo = actEWalletNo1;
+    }
+
     public String getAccountName() {
         return accountName;
     }
@@ -125,5 +174,36 @@ public class Account {
 
     public void setAccountBank(String accountBank) {
         this.accountBank = accountBank;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(actEWalletNo);
+        parcel.writeString(acct_BankNo);
+        parcel.writeString(accountBankBalance);
+        parcel.writeString(accountBank);
+        parcel.writeDouble(accountBalance);
+        parcel.writeInt(accountProfID);
+        parcel.writeInt(accountTradeeID);
+        parcel.writeString(accountName);
+        parcel.writeParcelable(transaction, i);
+        parcel.writeDouble(interest);
+        parcel.writeString(image);
+        parcel.writeTypedList(transactions);
+        parcel.writeInt(id_For_BigDecimal);
+        parcel.writeInt(type_BigDecimal);
+    }
+
+    public String getAccountIBAN() {
+        return accountIBAN;
+    }
+
+    public void setAccountIBAN(String accountIBAN) {
+        this.accountIBAN = accountIBAN;
     }
 }

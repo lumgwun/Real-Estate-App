@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost"
+    android:background="#f1f3f5">
+    <include layout="@layout/tool_bar6"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp">
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:elevation="5.0dp"
+            app:shape_arc_cropDirection="inside"
+            app:shape_arc_height="15dp"
+            app:shape_arc_position="bottom">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:id="@+id/app_bar_inv"
+                android:background="@drawable/shape_layer_3b"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="1dp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    app:title="Package List Tab"
+                    android:id="@+id/order_toolbar"
+                    android:textAlignment="center"
+                    app:titleTextColor="@color/colorPrimaryDark"
+                    android:layout_height="100dp"/>
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" />
+    </LinearLayout>
+
+
+
+    <com.melnykov.fab.FloatingActionButton
+        android:layout_width="match_parent"
+        android:src="@drawable/icon_tab1"
+        android:id="@+id/fab_TabListPacks"
+        android:layout_gravity="end"
+        android:foregroundGravity="center_horizontal"
+        android:theme="@style/ThemeOverlay.MaterialComponents"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="12dp"
+        android:layout_height="wrap_content"/>
+
+
+</TabHost>

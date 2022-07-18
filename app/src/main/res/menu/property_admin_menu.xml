@@ -1,0 +1,141 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<menu xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <group android:checkableBehavior="single">
+        <item android:title="Property Back Office">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/propHome"
+                        android:icon="@drawable/rect12"
+                        android:title="Dashboard" />
+
+                    <item
+                        android:id="@+id/propTimeLines"
+                        android:icon="@drawable/shape_rect13"
+                        android:title="TimeLines" />
+
+                    <item
+                        android:id="@+id/nav_real_package"
+                        android:icon="@drawable/rect12"
+                        android:title="My Savings Package" />
+
+                    <item
+                        android:id="@+id/real_FOR_payment"
+                        android:icon="@drawable/shape_rect13"
+                        android:title="Unpaid Savings" />
+
+                    <item
+                        android:id="@+id/nav_shopReal"
+                        android:icon="@drawable/shape_rect13"
+                        android:title="Skylight Shop" />
+                    <item
+                        android:id="@+id/payNowReal"
+                        android:icon="@drawable/rect12"
+                        android:title="Standing Order" />
+
+                    <item
+                        android:id="@+id/nav_a_RealHistory"
+                        android:icon="@drawable/rect12"
+                        android:title="My Savings History" />
+
+                    <item
+                        android:id="@+id/nav_a_RealPrivacy"
+                        android:icon="@drawable/rect12"
+                        android:title="Our Privacy Policy" />
+
+                </group>
+
+            </menu>
+
+        </item>
+        <item android:title="Property Tabs">
+            <menu>
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/prop_Tab"
+                        android:icon="@drawable/shape_rect13"
+                        android:title="Admin Tab" />
+
+                </group>
+
+            </menu>
+
+        </item>
+        <item android:title="Bookings">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/Bookings"
+                        android:icon="@drawable/shape_rect13"
+                        android:title="Bookings" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Transaction">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/payNowProp"
+                        android:icon="@drawable/rect12"
+                        android:title="Pay Now " />
+                    <item
+                        android:id="@+id/admin_prop_util"
+                        android:icon="@drawable/shape_rect13"
+                        android:title="Utilities" />
+                    <item
+                        android:id="@+id/transactions_prop"
+                        android:icon="@drawable/rect12"
+                        android:title="All Transactions" />
+
+                    <item
+                        android:id="@+id/nav_Bills"
+                        android:icon="@drawable/rect12"
+                        android:title="My Bills Payment" />
+
+
+                </group>
+
+            </menu>
+
+        </item>
+
+
+
+    </group>
+    <group android:checkableBehavior = "single">
+        <item android:title="Support">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/admin_prop_support"
+                        android:icon="@drawable/ic_dashboard_black_24dp"
+                        android:title="Support" />
+
+                </group>
+            </menu>
+        </item>
+    </group>
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/admin_pswd_Prop"
+                    android:icon="@drawable/shape_rect13"
+                    android:title="Change Password" />
+
+                <item
+                    android:id="@+id/logoutReal"
+                    android:icon="@drawable/shape_rect13"
+                    android:title="Logout from Profile" />
+
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

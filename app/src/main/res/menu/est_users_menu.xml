@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:itemTextAppearance="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single"
+        android:menuCategory="system">
+        <item
+            android:id="@+id/my_estateBo"
+            android:icon="@drawable/home_fg"
+            android:title="My Estate Dashboard" />
+
+
+        <item
+            android:id="@+id/my_est_timelines"
+            android:icon="@drawable/icon5_fg"
+            android:title="My Estate Timeline" />
+
+        <item
+            android:id="@+id/my_estate_new_user"
+            android:icon="@drawable/icon5_fg"
+            android:title="My Visitor Creator" />
+        <item
+            android:id="@+id/my_est_emerg"
+            android:icon="@drawable/icon5_fg"
+            android:title="My Emergencies" />
+        <item
+            android:id="@+id/my_est_visitation"
+            android:icon="@drawable/icon5_fg"
+            android:title="My Visitations" />
+
+
+        <item android:title="Finance">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/my_est_Inv"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Investment" />
+                    <item
+                        android:id="@+id/my_est_Grp_Savings"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Group Savings" />
+                    <item
+                        android:id="@+id/my_est_loan"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Loan Services" />
+
+
+                </group>
+            </menu>
+
+        </item>
+
+        <item android:title="Messaging">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/y_est_chat"
+                        android:icon="@drawable/chat_fg"
+                        android:title="Estate Chat" />
+
+                    <item
+                        android:id="@+id/my_est_meetings"
+                        android:icon="@drawable/chat_fg"
+                        android:title="Estate Meetings" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Estate Properties">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/_est_prop"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Properties" />
+
+                    <item
+                        android:id="@+id/my_est_prop"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="My Appartment" />
+
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Market Area">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/est_supplies_Gen"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Supplies" />
+
+                    <item
+                        android:id="@+id/my_est_supplies"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="My Supplies" />
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Estate Elections Area">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/est_elections"
+                        android:icon="@drawable/icon5_fg"
+                        android:title="Estate Elections" />
+
+
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Log Settings">
+            <menu>
+                <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/est_logout"
+                        android:icon="@drawable/selector"
+                        android:title="Logout" />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>

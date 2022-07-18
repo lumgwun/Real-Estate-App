@@ -1,4 +1,129 @@
 <resources>
-    <string name="app_name">Trade Master</string>
+    <string name="app_name">Trade &amp; Property </string>
     <string name="title_activity_maps">Map</string>
+    <string name="reminder_set">Date reminder set</string>
+
+    <string name="reminder_canceled">Date reminder cancelled</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="date_today">Date today</string>
+
+    <string name="date_tomorrow">Date tomorrow</string>
+
+    <string name="date_yesterday">Date yesterday</string>
+
+    <string name="date_week">Date is a week from now</string>
+
+    <string name="date_2_week">Date is a 2 weeks from now</string>
+
+    <string name="date_days">Date days </string>
+
+    <string name="loading1">Loading... </string>
+
+    <string name="date">Date </string>
+    <string name="happy">happy</string>
+    <string name="settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="back">Go back</string>
+    <string name="UserAddress">User Address</string>
+
+    <string name="cantLeaveMessage">Can not leave a message</string>
+
+    <string name="messageLeft">Message sent</string>
+
+    <string name="userAddress">User Address</string>
+
+    <string name="userPhone">User Phone</string>
+
+    <string name="noCurrentUser">No current User</string>
+
+    <string name="noPaymentDocument">No payment Document</string>
+
+    <string name="transactionFailed">Transaction failed</string>
+
+    <string name="withdrawWithWorker">Withdraw with a Teller</string>
+    <string name="next">NEXT</string>
+
+    <string name="skip">SKIP</string>
+
+    <string name="start">GOT IT</string>
+
+    <string name="now_playing">Now Playing</string>
+
+    <string name="upcoming">Upcoming</string>
+    <string name="slide_1_title">Our Cooperative  welcomes you to Our Business App!</string>
+
+    <string name="slide_1_desc">With Our Coop App , you can manage your Real Estate Business as an Agent or Owner, and also access Loans</string>
+
+    <string name="slide_2_title">Our plans</string>
+
+    <string name="slide_2_desc">Let our World Best traders trade for you, while you take 60% of the profits, and pay us 40%, Min. Account funding is $8500</string>
+
+    <string name="Add_New">Add New</string>
+
+    <string name="edit">Edit Contact</string>
+
+    <string name="delete">Delete Contact</string>
+    <string name="yes">Yes</string>
+
+    <string name="no">No</string>
+
+    <string name="menu_home">Home</string>
+
+    <string name="menu_gallery">Gallery</string>
+
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="welcome">Welcome,</string>
+
+    <string name="username">Username</string>
+
+    <string name="password">Password</string>
+
+    <string name="login">Login</string>
+
+    <string name="no_account">Don\'t have a profile?</string>
+
+    <string name="create_acc">Create a Profile</string>
+
+    <string name="help">Need help?</string>
+
+    <string name="create_account">Create Profile</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="first_name">First Name</string>
+
+    <string name="last_name">Last Name</string>
+
+    <string name="password_confirm">Confirm Password</string>
+
+    <string name="remember">Remember Credentials</string>
+
+    <string name="good_evening">Good evening</string>
+
+    <string name="good_afternoon">Good afternoon</string>
+
+    <string name="good_morning">Good morning</string>
+    <string name="logout">Logout</string>
+    <string name="button_ok">Ok.</string>
+    <string name="title_activity_setting">SettingAct</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
 </resources>

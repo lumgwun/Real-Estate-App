@@ -9,6 +9,22 @@
         <item>Gold</item>
         <item>VIP</item>
     </string-array>
+    <array name="array_dot_active">
+
+        <item>@color/dot_light_screen1</item>
+
+        <item>@color/dot_light_screen2</item>
+
+    </array>
+
+
+    <array name="array_dot_inactive">
+
+        <item>@color/dot_dark_screen1</item>
+
+        <item>@color/dot_dark_screen2</item>
+
+    </array>
 
     <string-array name="MembershipAmount">
         <item></item>
@@ -18,5 +34,425 @@
         <item>10000</item>
         <item>50000</item>
         <item>100000</item>
+    </string-array>
+
+    <string-array name="Plan_Currency">
+        <item></item>
+        <item>NGN</item>
+        <item>GHS</item>
+        <item>ZAR</item>
+        <item>USD</item>
+    </string-array>
+
+    <string-array name="user_Status">
+        <item></item>
+        <item>NotFound</item>
+        <item>Trader</item>
+        <item>AdminUser</item>
+        <item>Secretary</item>
+        <item>Investor</item>
+        <item>UnSubscribedUser</item>
+        <item>TradeInvestor</item>
+        <item>PropertyOwner</item>
+        <item>SuperAdmin</item>
+        <item>PropertyAgent</item>
+        <item>Estate</item>
+        <item>LoanPayer</item>
+        <item>LoanDefaulter</item>
+        <item>InCompleteMembership</item>
+        <item>CompleteMembership</item>
+        <item>BigEstate</item>
+        <item>RealEstateCompany</item>
+        <item>BlockedUser</item>
+    </string-array>
+    <string-array name="user_Type">
+        <item></item>
+        <item>Teller</item>
+        <item>Trader</item>
+        <item>AdminUser</item>
+        <item>Secretary</item>
+        <item>Investor</item>
+        <item>Profile</item>
+        <item>TradeInvestor</item>
+        <item>PropertyOwner</item>
+        <item>SuperAdmin</item>
+        <item>BlockedUser</item>
+    </string-array>
+    <string-array name="gender">
+        <item></item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="Banks">
+        <item></item>
+        <item>ACCESS BANK PLC</item>
+        <item>First Bank of Nigeria</item>
+        <item>UBA PLC</item>
+        <item>Heritage</item>
+        <item>Keystone Bank</item>
+        <item>Skye Bank</item>
+        <item>Sterling Bank</item>
+        <item>Union Bank</item>
+        <item>GTBank Plc</item>
+        <item>FCMB</item>
+        <item>TrustBond</item>
+        <item>SunTrust Bank</item>
+        <item>Diamond Bank</item>
+        <item>GT MOBILE MONEY</item>
+        <item>FET</item>
+        <item>Mkudi</item>
+        <item>FSDH</item>
+        <item>Coronation Merchant Bank</item>
+        <item>Enterprise Bank</item>
+        <item>Wema Bank</item>
+        <item>Parralex</item>
+        <item>Pagatech</item>
+        <item>Stanbic IBTC Bank</item>
+        <item>Fidelity Mobile</item>
+        <item>EcoMobile</item>
+        <item>Ecobank Plc</item>
+        <item>JAIZ Bank</item>
+        <item>Access Money</item>
+        <item>Unity Bank</item>
+        <item>CitiBank</item>
+        <item>Fidelity Bank</item>
+        <item>eTranzact</item>
+        <item>Standard Chartered Bank</item>
+        <item>Zenith Bank</item>
+        <item>Jubilee Life Mortgage Bank</item>
+        <item>Sterling Mobile</item>
+        <item>FBNMobile</item>
+        <item>Stanbic Mobile Money</item>
+        <item>TCF MFB</item>
+        <item>ASO Savings and Loans</item>
+        <item>Cellulant</item>
+        <item>NIP Virtual Bank</item>
+        <item>Paycom</item>
+        <item>NPF MicroFinance Bank</item>
+        <item>Imperial Homes Mortgage Bank</item>
+        <item>Covenant Microfinance Bank</item>
+        <item>SafeTrust Mortgage Bank</item>
+        <item>ChamsMobile</item>
+        <item>ZenithMobile</item>
+        <item>PayAttitude Online</item>
+        <item>Fortis Microfinance Bank</item>
+        <item>VTNetworks</item>
+        <item>TeasyMobile</item>
+        <item>MoneyBox</item>
+        <item>Hedonmark</item>
+        <item>Eartholeum</item>
+        <item>ReadyCash (Parkway)</item>
+        <item>Omoluabi Mortgage Bank</item>
+        <item>TagPay</item>
+        <item>FortisMobile</item>
+        <item>Page MFBank</item>
+        <item>Pagatech</item>
+    </string-array>
+    <string-array name="PropertySearchParam">
+        <item></item>
+        <item>Town</item>
+        <item>Price</item>
+        <item>Type</item>
+        <item>Capacity</item>
+        <item>LGA</item>
+        <item>State</item>
+        <item>Country</item>
+        <item>Duration</item>
+    </string-array>
+
+    <string-array name="TransactionTypes">
+        <item>PAYMENT</item>
+        <item>TRANSFER</item>
+        <item>DEPOSIT</item>
+        <item>MANUAL_WITHDRAWAL</item>
+        <item>SAVINGS</item>
+        <item>LOAN</item>
+        <item>STANDING_ORDER</item>
+        <item>GROUP_SAVINGS_DEPOSIT</item>
+        <item>GROUP_SAVINGS_WITHDRAWAL</item>
+        <item>WITHDRAWALTX</item>
+        <item>RETURNS</item>
+
+    </string-array>
+    <string-array name="date_filters">
+
+        <item>Old - New</item>
+        <item>New - Old</item>
+
+    </string-array>
+    <string-array name="days">
+
+        <item>Sunday</item>
+
+        <item>Monday</item>
+
+        <item>Tuesday</item>
+
+        <item>Wednesday</item>
+
+        <item>Thursday</item>
+
+        <item>Friday</item>
+
+        <item>Saturday</item>
+
+    </string-array>
+
+    <string-array name="broker">
+        <item></item>
+        <item>Hantec</item>
+        <item>FXTM</item>
+    </string-array>
+
+    <string-array name="state">
+        <item></item>
+        <item>Outside Nigeria</item>
+        <item>Abia</item>
+        <item>Adamawa State</item>
+        <item>Akwa Ibom State</item>
+        <item>Anambra State</item>
+        <item>Bauchi State</item>
+        <item>Bayelsa State</item>
+        <item>Benue State</item>
+        <item>Borno State</item>
+        <item>Cross River State</item>
+        <item>Delta State</item>
+        <item>Ebonyi State</item>
+        <item>Edo State</item>
+        <item>Ekiti State</item>
+        <item>Enugu State</item>
+        <item>Gombe State</item>
+        <item>Imo State</item>
+        <item>Jigawa State</item>
+        <item>Kaduna State</item>
+        <item>Kano State</item>
+        <item>Katsina State</item>
+        <item>Kebbi State</item>
+        <item>Kogi State</item>
+        <item>Kwara State</item>
+        <item>Lagos State</item>
+        <item>Nasarawa State</item>
+        <item>Niger State</item>
+        <item>Ogun State</item>
+        <item>Ondo State</item>
+        <item>Osun State</item>
+        <item>Oyo State</item>
+        <item>Plateau State</item>
+        <item>Rivers State</item>
+        <item>Sokoto State</item>
+        <item>Taraba State</item>
+        <item>Yobe State</item>
+        <item>Zamfara State</item>
+    </string-array>
+
+
+    <string-array name="Countries">
+        <item></item>
+        <item>Afghanistan</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>The Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Cabo Verde</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo, Democratic Republic of the
+            Congo,</item>
+        <item>Republic of the
+            Costa Rica</item>
+        <item>Côte d’Ivoire</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>East Timor (Timor-Leste)</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Eswatini</item>
+        <item>Ethiopia</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Gabon</item>
+        <item>The Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Greece</item>
+        <item>Grenada</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Egypt</item>
+        <item>Guinea-Bissau</item>
+        <item>Equatorial Guinea</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Honduras</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Korea, North</item>
+        <item>Korea, South</item>
+        <item>Kosovo</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Federated States of
+            Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar (Burma)</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>North Macedonia</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Qatar</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Sudan, South</item>
+        <item>Suriname</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Tuvalu</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>United States</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Vatican City</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
     </string-array>
 </resources>

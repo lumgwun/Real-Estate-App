@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tradeD"
+        android:title="Trade Dashboard"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/tradeInv"
+        android:title="Trade Investor"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/trader"
+        android:title="Trader"
+        android:icon="@drawable/new_fg"/>
+
+</menu>

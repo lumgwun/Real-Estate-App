@@ -43,7 +43,7 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/lsg"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -52,7 +52,79 @@
         android:value="androidx.core.app.CoreComponentFactory"
         tools:ignore="GoogleAppIndexingWarning"
         tools:node="replace">
-        <activity android:name=".Accountant.AccountantBO"></activity>
+        <activity android:name=".EstateProperty.EstateMoneyTransferAct"></activity>
+        <activity android:name=".EstateProperty.EstateSOPaymentAct" />
+        <activity
+            android:name=".SettingAct"
+            android:label="@string/title_activity_setting" />
+        <activity android:name=".OurPrivPolAct" />
+        <activity android:name=".AboutUsAct" />
+        <activity android:name=".GrpSavingsAct" />
+        <activity android:name=".MyChatAct" />
+        <activity android:name=".MyGrpSavingsAct" />
+        <activity android:name=".MySoAct" />
+        <activity android:name=".MyTransfersAct" />
+        <activity android:name=".MySubAct" />
+        <activity android:name=".MyDeliveryAct" />
+        <activity android:name=".MyProperties" />
+        <activity android:name=".MyJobBoadAct" />
+        <activity android:name=".TimelineAct" />
+        <activity android:name=".Logistics.LogisticsAct" />
+        <activity android:name=".WholeSaleMarketAct" />
+        <activity android:name=".LoanAct" />
+        <activity android:name=".OurProperties" />
+        <activity android:name=".EstateProperty.EstateAppartAct" />
+        <activity android:name=".EstateProperty.PropInterestList" />
+        <activity android:name=".EstateProperty.EstateBIrthdayAct" />
+        <activity android:name=".EstateProperty.EstateUsers" />
+        <activity android:name=".EstateProperty.EstateElectionAct" />
+        <activity android:name=".EstateProperty.EstateMeetingAct" />
+        <activity android:name=".EstateProperty.EstateMarketAct" />
+        <activity android:name=".EstateProperty.EstateGSavingsAct" />
+        <activity android:name=".EstateProperty.EstateLoanAct" />
+        <activity android:name=".EstateProperty.VisitationAct" />
+        <activity android:name=".EstateProperty.EstateEmergAct" />
+        <activity android:name=".EstateProperty.EstateUserCreator" />
+        <activity android:name=".CameraAct" />
+        <activity android:name=".EstateProperty.EstateAdminAct" />
+        <activity android:name=".EstateProperty.EstateChatAct" />
+        <activity android:name=".EstateProperty.EstateFinanceAct" />
+        <activity android:name=".EstateProperty.MyNewPropAct" />
+        <activity android:name=".EstateProperty.MyPropRevAct" />
+        <activity android:name=".EstateProperty.MyEstatePropAct" />
+        <activity android:name=".ReferralAct" />
+        <activity android:name=".Trader.MyTradeProfitsAct" />
+        <activity android:name=".Tradee.MyWithdrawals" />
+        <activity android:name=".Tradee.MyTradeTranxAct" />
+        <activity android:name=".Tradee.MyWeeklyTrades" />
+        <activity android:name=".Trader.MyTrades" />
+        <activity android:name=".Tradee.TradeInvAct" />
+        <activity android:name=".Trader.TradingAct" />
+        <activity android:name=".EstateProperty.AgentOfficeAct" />
+        <activity android:name=".EstateProperty.PropertyAct" />
+        <activity android:name=".Loan.NewLoanAct" />
+        <activity android:name=".Loan.LoanListAct" />
+        <activity android:name=".Loan.LoanDashBoard" />
+        <activity android:name=".EstateProperty.EstateTimelineAct" />
+        <activity android:name=".EstateProperty.EstateOfficeAct" />
+        <activity android:name=".PasswordRecovAct" />
+        <activity android:name=".SignTabMainAct" />
+        <activity android:name=".LoginAct" />
+        <activity android:name=".UserDashBoard" />
+        <activity android:name=".ConfirmationAct">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WelcomeAct" />
+        <activity android:name=".Tranx.CreateBankAcctAct" />
+        <activity android:name=".NotiAct" />
+        <activity android:name=".SMSAct" />
+        <activity android:name=".SignUpAct" />
+        <activity android:name=".Trader.TraderDashboardAct" />
+        <activity android:name=".Accountant.AccountantBO" />
         <activity android:name=".Admin.AdminDrawerAct" />
         <activity android:name=".Tellers.TellerHomeChoices" />
         <activity android:name=".BlockedUserAct" />
@@ -87,15 +159,8 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".Traders.AfterBrokerSignUpAct" />
-        <activity android:name=".Traders.BrokerSignUp" />
-        <activity android:name=".UserDashBoard">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Tradee.AfterBrokerSignUpAct" />
+        <activity android:name=".Tradee.BrokerSignUp" />
     </application>
 
 </manifest>

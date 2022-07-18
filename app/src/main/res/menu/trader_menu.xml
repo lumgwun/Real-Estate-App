@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tradingHome"
+        android:title="Trading Dashboard"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/traderTrades"
+        android:title="My Trades"
+        android:icon="@drawable/list_fg"/>
+    <item
+        android:id="@+id/traderTNull"
+        android:title="" />
+
+    <item
+        android:id="@+id/traderProfits"
+        android:title="My Profits"
+        android:icon="@drawable/new_fg"/>
+
+    <item
+        android:id="@+id/traderInvRef"
+        android:title="Referrals"
+        android:icon="@drawable/new_fg"/>
+
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/abtUs"
+        android:title="About Us"
+        android:icon="@drawable/lsg"/>
+
+    <item
+        android:id="@+id/ourP"
+        android:title="Our Privacy Policy"
+        android:icon="@drawable/icon5_fg"/>
+
+    <item
+        android:id="@+id/profileSettings"
+        android:title="Settings"
+        android:icon="@drawable/icon5_fg"/>
+
+</menu>

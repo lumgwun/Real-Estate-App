@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/est_drawer"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context="com.ls.awajimatradeeder.EstateProperty.EstateOfficeAct">
+
+    <include
+        layout="@layout/app_bar_estate"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/bottom_nav_estate"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent" />
+
+    <com.rom4ek.arcnavigationview.ArcNavigationView
+        android:id="@+id/nav_view_estate"
+        android:layout_width="match_parent"
+        android:background="@drawable/rect_white"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:arc_cropDirection="cropOutside"
+        app:arc_width="96dp"
+        app:itemIconSize="20dp"
+        android:layout_marginStart="5dp"
+        android:fitsSystemWindows="true"
+        android:layout_marginEnd="5dp"
+        app:itemShapeInsetStart="10dp"
+        android:paddingVertical="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:itemHorizontalPadding="40dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/purple_new"
+        android:layout_marginBottom="10dp"
+        app:itemBackground="@drawable/shape_layer_3b"
+        app:itemRippleColor="@color/white"
+        app:itemTextAppearance="?android:attr/textAppearanceSmallInverse"
+        app:headerLayout="@layout/header_estate_office"
+        android:stateListAnimator="@anim/raise"
+        app:menu="@menu/estate_office_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

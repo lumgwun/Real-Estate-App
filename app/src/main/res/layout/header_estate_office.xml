@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    android:layout_marginEnd="2dp"
+    android:paddingStart="50dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/shape_layer_2a"
+    android:layout_height="wrap_content"
+    tools:context="com.ls.awajimatradeeder.EstateProperty.EstateOfficeAct">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/user1"
+                android:id="@+id/est_pics"
+                android:layout_marginBottom="10dp"
+                android:layout_height="50dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:text="User Name:"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:id="@+id/eo_username"
+                android:textSize="15sp"
+                android:textColor="@color/dark_and_red"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:text="My Appartments"
+                android:textStyle="bold"
+                android:onClick="myAppartments"
+                android:id="@+id/my_appartments"
+                android:textSize="15sp"
+                android:textColor="@color/dark_and_red"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="visible"
+            android:id="@+id/layoutSub"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:onClick="myEstSubs"
+                android:id="@+id/my_subscriptions"
+                android:textColor="@color/dark_and_red"
+                android:text="My Subs"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="visible"
+            android:id="@+id/layoutInv"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:layout_marginBottom="20dp"
+                android:paddingStart="2dp"
+                android:onClick="goReturns"
+                android:id="@+id/my_Inv_Returns"
+                android:textColor="@color/dark_and_red"
+                android:text="My Trade Returns:"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

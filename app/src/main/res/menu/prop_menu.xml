@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/propertyHome"
+        android:title="Dashboard"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/estateOffice"
+        android:title="Estate Back Office"
+        android:icon="@drawable/icon1_fg"/>
+
+    <item
+        android:id="@+id/agentOffice"
+        android:title="Agent Back Office"
+        android:icon="@drawable/icon5_fg"/>
+
+</menu>

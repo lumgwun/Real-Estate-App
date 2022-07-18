@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/agentHome"
+        android:title="Agent Home"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/my_prop"
+        android:title="My Properties"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/my_NullProp"
+        android:title="" />
+    <item
+        android:id="@+id/my_prop_Rev"
+        android:title="Profit Withdrawals"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/add_new_prop"
+        android:title="New Properties"
+        android:icon="@drawable/new_fg"/>
+
+</menu>

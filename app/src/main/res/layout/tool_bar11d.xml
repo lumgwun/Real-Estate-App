@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="6"
+    android:background="@drawable/shape_rect13b"
+    android:layout_height="wrap_content">
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:elevation="5.0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rect_their_message"
+        app:shape_arc_cropDirection="inside"
+        app:shape_arc_height="1dp"
+        app:shape_arc_position="bottom">
+    </com.github.florent37.shapeofview.shapes.ArcView>
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:elevation="5.0dp"
+        android:layout_weight="4"
+        app:shape_arc_cropDirection="inside"
+        app:shape_arc_height="15dp"
+        app:shape_arc_position="bottom">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                app:title="@string/app_name"
+                android:background="@drawable/rect6g"
+                android:layout_marginEnd="10dp"
+                app:titleMarginStart="70dp"
+                android:foregroundGravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_marginStart="10dp"
+                app:titleTextColor="@android:color/holo_red_dark"
+                android:layout_height="100dp"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:elevation="5.0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:background="@drawable/rect_their_message"
+        app:shape_clip_drawable="@drawable/shape_layer_1"
+        app:shape_arc_cropDirection="inside"
+        app:shape_arc_height="1dp"
+        app:shape_arc_position="bottom">
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

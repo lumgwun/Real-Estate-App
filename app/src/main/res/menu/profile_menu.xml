@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/userHome"
+        android:title="Home"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/app_properties"
+        android:title="Properties"
+        android:icon="@drawable/icon5_fg"/>
+
+    <item
+        android:id="@+id/user_logistics"
+        android:title="Logistics"
+        android:icon="@drawable/icon1_fg"/>
+
+
+    <item
+        android:id="@+id/app_makeMoney"
+        android:title="Make Money"
+        android:icon="@drawable/money_fg"/>
+
+    <item
+        android:id="@+id/marketPlace"
+        android:title="Wholesale"
+        android:icon="@drawable/group_fg"/>
+
+    <item
+        android:id="@+id/OurLoans"
+        android:title="Loans"
+        android:icon="@drawable/money_fg"/>
+
+</menu>

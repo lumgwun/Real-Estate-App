@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/loanHome"
+        android:title="Dashboard"
+        android:icon="@drawable/home_fg"/>
+    <item
+        android:id="@+id/loanList"
+        android:title="Loans"
+        android:icon="@drawable/list_fg"/>
+
+    <item
+        android:id="@+id/newLoan"
+        android:title="Request a New Loan"
+        android:icon="@drawable/new1_fg"/>
+
+</menu>
