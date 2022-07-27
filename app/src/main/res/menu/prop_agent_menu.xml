@@ -20,6 +20,6 @@
     <item
         android:id="@+id/add_new_prop"
         android:title="New Properties"
-        android:icon="@drawable/new_fg"/>
+        android:icon="@drawable/fab_add"/>
 
 </menu>

@@ -15,11 +15,11 @@
     <item
         android:id="@+id/traderProfits"
         android:title="My Profits"
-        android:icon="@drawable/new_fg"/>
+        android:icon="@drawable/money_fg"/>
 
     <item
         android:id="@+id/traderInvRef"
         android:title="Referrals"
-        android:icon="@drawable/new_fg"/>
+        android:icon="@drawable/user2"/>
 
 </menu>

@@ -9,6 +9,10 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -52,7 +56,15 @@
         android:value="androidx.core.app.CoreComponentFactory"
         tools:ignore="GoogleAppIndexingWarning"
         tools:node="replace">
-        <activity android:name=".EstateProperty.EstateMoneyTransferAct"></activity>
+        <activity android:name=".EstateProperty.EstPhyMeetAct"></activity>
+        <activity android:name=".EstateProperty.EstVirtualMeetAct" />
+        <activity android:name=".EstateProperty.DeleteEstAct" />
+        <activity android:name=".EstateProperty.ShareEstLinkAct" />
+        <activity android:name=".EstateProperty.EstatePayTab" />
+        <activity android:name=".EstateProperty.EstatePaymentAct" />
+        <activity android:name=".EstateProperty.EstateCheckOutAct" />
+        <activity android:name=".EstateProperty.PropHomeAct" />
+        <activity android:name=".EstateProperty.EstateMoneyTransferAct" />
         <activity android:name=".EstateProperty.EstateSOPaymentAct" />
         <activity
             android:name=".SettingAct"

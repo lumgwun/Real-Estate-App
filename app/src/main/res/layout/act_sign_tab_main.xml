@@ -8,7 +8,7 @@
     android:id="@android:id/tabhost"
     tools:actionBarNavMode="standard"
     android:theme="@style/Theme.SkylightAppTab"
-    android:background="@drawable/rect_their_message"
+    android:background="@drawable/shape_layer_3b"
     tools:context="com.ls.awajimatradeeder.SignTabMainAct">
     <include layout="@layout/tool_bar11f"/>
 
@@ -33,7 +33,7 @@
 
     <com.github.clans.fab.FloatingActionButton
         android:layout_width="match_parent"
-        android:src="@drawable/icon_tab1"
+        android:src="@drawable/home_fg"
         android:id="@+id/fab_signinOut5"
         android:layout_gravity="end|bottom"
         android:foregroundGravity="center_horizontal"

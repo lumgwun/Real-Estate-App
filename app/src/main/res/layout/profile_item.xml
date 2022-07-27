@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/UserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_rowWeight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#f1f5f7"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:background="@drawable/shape_rect13"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:contentDescription="Name"
+                    android:src="@drawable/user1"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/profile_thumbnail"
+                    android:layout_height="70dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="User Names"
+                            android:layout_weight="1"
+                            android:id="@+id/user_surname"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="15dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ibrahim Okafor Udo"
+                            android:id="@+id/user_allNames"
+                            android:gravity="start"
+                            android:layout_weight="2"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Phone Number"
+                            android:layout_weight="1"
+                            android:id="@+id/user_tel"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="15dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="070390000000"
+                            android:id="@+id/user_tel1"
+                            android:gravity="start"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="NIN Name"
+                            android:layout_weight="1"
+                            android:id="@+id/user_NINName"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="15dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:text="Ibrahim Okafor Udo"
+                            android:id="@+id/user_NINName1"
+                            android:gravity="start"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3"
+                android:id="@+id/layerDateJ"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date Joined:"
+                    android:layout_weight="1"
+                    android:id="@+id/user_joined_date2"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="10/03/2021"
+                    android:layout_weight="2"
+                    android:id="@+id/user_joined_date3"
+                    android:gravity="start"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3"
+                android:id="@+id/layerEmail"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address:"
+                    android:id="@+id/user_email"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="ourcoopappuser@gmail.com"
+                    android:id="@+id/user_email1"
+                    android:gravity="start"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3"
+                android:id="@+id/layerDOB"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Birth:"
+                    android:layout_weight="1"
+                    android:id="@+id/user_dob2"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="23/04/1981"
+                    android:layout_weight="2"
+                    android:id="@+id/user_dob3"
+                    android:gravity="start"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:id="@+id/linear_userName"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="UserName:"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="20dp"
+                        android:id="@+id/user_username2"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="15dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="abasioma22"
+                        android:id="@+id/user_username3"
+                        android:gravity="start"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3"
+                android:id="@+id/layerGender"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gender:"
+                    android:layout_weight="1"
+                    android:id="@+id/user_gender2"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:layout_weight="2"
+                    android:id="@+id/user_gender3"
+                    android:gravity="start"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/savings_layout"
+                    android:weightSum="3"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Customer"
+                        android:layout_marginEnd="20dp"
+                        android:id="@+id/machineType"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="15dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="Approved profile"
+                        android:id="@+id/user_status2"
+                        android:gravity="start"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3"
+                android:id="@+id/layerAddress"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:id="@+id/user_address2"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:id="@+id/user_addressState"
+                    android:gravity="start"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="User TX:"
+                    android:layout_weight="1"
+                    android:id="@+id/user_tx"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/rect6b"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="2dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:layout_width="0dp"
+                    android:text="More!"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/more_details1"
+                    android:background="@drawable/rect6b"
+                    android:layout_marginEnd="2dp"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="0dp"
+                    android:layout_gravity="bottom"
+                    android:textStyle="italic"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/Red"
+                    android:textOn="Approved"
+                    android:backgroundTintMode="src_in"
+                    android:id="@+id/profile_action1"
+                    android:text="Admin Action"
+                    android:padding="12dp"
+                    android:textOff="Not approved"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

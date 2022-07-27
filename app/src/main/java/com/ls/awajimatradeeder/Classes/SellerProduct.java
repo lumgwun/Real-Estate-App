@@ -25,7 +25,7 @@ public class SellerProduct implements Serializable, Parcelable {
 
     private int SellerImageCount;
     private SellerProduct sellerProduct;
-    private PictureImage sellerProductPicImage;
+    private String sellerProductPicImage;
     private ArrayList<PictureImage> pictureImages;
 
 
@@ -211,11 +211,11 @@ public class SellerProduct implements Serializable, Parcelable {
         this.sellerProductCurrency = sellerProductCurrency;
     }
 
-    public PictureImage getSellerProductPicImage() {
+    public String getSellerProductPicImage() {
         return sellerProductPicImage;
     }
 
-    public void setSellerProductPicImage(PictureImage sellerProductPicImage) {
+    public void setSellerProductPicImage(String sellerProductPicImage) {
         this.sellerProductPicImage = sellerProductPicImage;
     }
 

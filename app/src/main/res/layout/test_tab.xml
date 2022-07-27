@@ -55,7 +55,7 @@
 
     <com.melnykov.fab.FloatingActionButton
         android:layout_width="match_parent"
-        android:src="@drawable/icon_tab1"
+        android:src="@drawable/icon1_fg"
         android:id="@+id/fab_TabListPacks"
         android:layout_gravity="end"
         android:foregroundGravity="center_horizontal"

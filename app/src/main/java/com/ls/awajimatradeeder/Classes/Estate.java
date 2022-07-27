@@ -1,5 +1,6 @@
 package com.ls.awajimatradeeder.Classes;
 
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -8,16 +9,43 @@ import com.google.android.gms.maps.model.LatLng;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import static com.ls.awajimatradeeder.Classes.Profile.PROFILES_TABLE;
+import static com.ls.awajimatradeeder.Classes.Profile.PROFILE_ID;
+
 public class Estate implements Serializable, Parcelable {
+
+    public static final String ESTATE_ID = "estate_ID";
+    public static final String ESTATE_SUPERADMIN_ID = "estate_SuperAdmin_ID";
+    public static final String ESTATE_NAME = "estate_Name";
+    public static final String ESTATE_ADDRESS = "estate_Address";
+    public static final String ESTATE_LOCALITY = "estate_Locality";
+    public static final String ESTATE_STATE = "estate_State";
+    public static final String ESTATE_COUNTRY = "estate_Country";
+    public static final String ESTATE_LATLNG = "estate_LatLng";
+    public static final String ESTATE_STATUS = "estate_status";
+    public static final String ESTATE_PROFILEID = "estate_ProfileID";
+    public static final String ESTATE_LOGO = "estate_Logo";
+    public static final String ESTATE_DESC = "estate_Desc";
+    public static final String ESTATE_TABLE = "estate_table";
+
+    public static final String CREATE_ESTATE_TABLE = "CREATE TABLE " + ESTATE_TABLE + " (" + ESTATE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + ESTATE_SUPERADMIN_ID + " INTEGER, " + ESTATE_NAME + " TEXT, " + ESTATE_ADDRESS + " TEXT, " + ESTATE_LOCALITY + " TEXT, " + ESTATE_STATE + " TEXT, " + ESTATE_COUNTRY + " TEXT, " +
+            ESTATE_LATLNG + " TEXT, " + ESTATE_STATUS + " TEXT, " + ESTATE_PROFILEID + " INTEGER, " + ESTATE_LOGO + " BLOB, " + ESTATE_DESC + " TEXT, " + "FOREIGN KEY(" + ESTATE_PROFILEID + ") REFERENCES " + PROFILES_TABLE + "(" + PROFILE_ID + "))";
+
+
     private EstateSuperAdmin estateSuperAdmin;
+    private Profile estateProfile;
     private int estateSuperAdminID;
+    private int estateProfileID;
     private int estateID;
     private String estateName;
+    private String estateDescp;
     private String estateAddress;
-    private String estateLGA;
+    private String estateLocality;
+    private String estateState;
     private String estateCountry;
     private String estateStatus;
-    private LatLng estateLatLng;
+    private String estateLogo;
+    private String estateLatLng;
     private ArrayList<EstateElection> estateElections;
     private ArrayList<EstateChat> estateChats;
     private ArrayList<EstateVisit> estateVisits;
@@ -40,6 +68,9 @@ public class Estate implements Serializable, Parcelable {
     private ArrayList<EstateEmergency> estateEmergencies;
     private ArrayList<EstateGroupSavings> estateGroupSavings;
     private ArrayList<EstateCoopMembers> estateCoopMembers;
+    private String estateCurrency;
+    private String estPriceDur;
+    private double estPrice;
 
     public Estate() {
         super();
@@ -51,7 +82,7 @@ public class Estate implements Serializable, Parcelable {
         estateID = in.readInt();
         estateName = in.readString();
         estateAddress = in.readString();
-        estateLGA = in.readString();
+        estateLocality = in.readString();
         estateCountry = in.readString();
         estateStatus = in.readString();
         estateLatLng = in.readParcelable(LatLng.class.getClassLoader());
@@ -109,11 +140,11 @@ public class Estate implements Serializable, Parcelable {
         this.estateAddress = estateAddress;
     }
 
-    public LatLng getEstateLatLng() {
+    public String getEstateLatLng() {
         return estateLatLng;
     }
 
-    public void setEstateLatLng(LatLng estateLatLng) {
+    public void setEstateLatLng(String estateLatLng) {
         this.estateLatLng = estateLatLng;
     }
 
@@ -125,12 +156,12 @@ public class Estate implements Serializable, Parcelable {
         this.estateCountry = estateCountry;
     }
 
-    public String getEstateLGA() {
-        return estateLGA;
+    public String getEstateLocality() {
+        return estateLocality;
     }
 
-    public void setEstateLGA(String estateLGA) {
-        this.estateLGA = estateLGA;
+    public void setEstateLocality(String estateLocality) {
+        this.estateLocality = estateLocality;
     }
 
     public ArrayList<EstateElection> getEstateElections() {
@@ -272,10 +303,10 @@ public class Estate implements Serializable, Parcelable {
         parcel.writeInt(estateID);
         parcel.writeString(estateName);
         parcel.writeString(estateAddress);
-        parcel.writeString(estateLGA);
+        parcel.writeString(estateLocality);
         parcel.writeString(estateCountry);
         parcel.writeString(estateStatus);
-        parcel.writeParcelable(estateLatLng, i);
+        parcel.writeString(estateLatLng);
     }
 
     public ArrayList<EstateVisit> getEstateVisits() {
@@ -332,5 +363,69 @@ public class Estate implements Serializable, Parcelable {
 
     public void setEstateChats(ArrayList<EstateChat> estateChats) {
         this.estateChats = estateChats;
+    }
+
+    public String getEstateState() {
+        return estateState;
+    }
+
+    public void setEstateState(String estateState) {
+        this.estateState = estateState;
+    }
+
+    public int getEstateProfileID() {
+        return estateProfileID;
+    }
+
+    public void setEstateProfileID(int estateProfileID) {
+        this.estateProfileID = estateProfileID;
+    }
+
+    public String getEstateLogo() {
+        return estateLogo;
+    }
+
+    public void setEstateLogo(String estateLogo) {
+        this.estateLogo = estateLogo;
+    }
+
+    public Profile getEstateProfile() {
+        return estateProfile;
+    }
+
+    public void setEstateProfile(Profile estateProfile) {
+        this.estateProfile = estateProfile;
+    }
+
+    public String getEstateDescp() {
+        return estateDescp;
+    }
+
+    public void setEstateDescp(String estateDescp) {
+        this.estateDescp = estateDescp;
+    }
+
+    public String getEstateCurrency() {
+        return estateCurrency;
+    }
+
+    public void setEstateCurrency(String estateCurrency) {
+        this.estateCurrency = estateCurrency;
+    }
+
+    public String getEstPriceDur() {
+        return estPriceDur;
+    }
+
+    public void setEstPriceDur(String estPriceDur) {
+        this.estPriceDur = estPriceDur;
+    }
+
+    public double getEstPrice() {
+        return estPrice;
+    }
+
+    public void setEstPrice(double estPrice) {
+        this.estPrice = estPrice;
     }
 }

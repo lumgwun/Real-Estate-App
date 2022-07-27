@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 import com.ls.awajimatradeeder.Adapters.EstateLoanAdapter;
@@ -38,6 +39,7 @@ import com.ls.awajimatradeeder.Classes.Profile;
 import com.ls.awajimatradeeder.Classes.Property;
 import com.ls.awajimatradeeder.Classes.SellerProduct;
 import com.ls.awajimatradeeder.Classes.Trader;
+import com.ls.awajimatradeeder.Classes.Utils;
 import com.ls.awajimatradeeder.Classes.WeeklyTrade;
 import com.ls.awajimatradeeder.Database.DBHelper;
 import com.ls.awajimatradeeder.EstateProperty.MyEstatePropAct;
@@ -89,6 +91,8 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
     Toolbar toolbar;
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle;
+    private BottomSheetBehavior behavior;
+    private Utils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +108,7 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
         estateProperties= new ArrayList<>();
         estateJobs= new ArrayList<>();
         pictureImageArrayList= new ArrayList<>();
+        utils= new Utils();
         ArcNavigationView navigationView = (ArcNavigationView) findViewById(R.id.user_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         drawer = findViewById(R.id.user_drawer);
@@ -233,6 +238,25 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
                 .append("How are you? ")
                 .append(getString(R.string.happy))
                 .append(dow);
+
+        View bottomSheet = findViewById(R.id.bottom_sheet);
+        behavior = BottomSheetBehavior.from(bottomSheet);
+        behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                if (newState == BottomSheetBehavior.STATE_DRAGGING) {
+                    behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                }
+                if (newState == BottomSheetBehavior.STATE_COLLAPSED) {
+                    behavior.setPeekHeight(0);
+                }
+            }
+
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+                // React to dragging events
+            }
+        });
 
 
 

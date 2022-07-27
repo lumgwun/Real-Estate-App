@@ -29,7 +29,7 @@ public class PrefManager {
     int PRIVATE_MODE = 0;
 
     // Shared preferences file name
-    private static final String PREF_NAME = "skylight";
+    private static final String PREF_NAME = "Tradeeder";
     private static final String PREF_PARAM_IS_PROFILE_CREATED = "isProfileCreated";
     private static final String PREF_PARAM_IS_POSTS_WAS_LOADED_AT_LEAST_ONCE = "isPostsWasLoadedAtLeastOnce";
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
@@ -231,18 +231,17 @@ public class PrefManager {
     }
 
 
-    public void saveLoan(Context context, List<Loan> loans) {
+    public void saveLoan(Context context, Loan loan) {
         SharedPreferences settings;
         SharedPreferences.Editor editor;
 
         settings = context.getSharedPreferences(PREF_NAME,
                 Context.MODE_PRIVATE);
         editor = settings.edit();
-
         Gson gson = new Gson();
-        String jsonSavings = gson.toJson(loans);
+        String jsonLoans = gson.toJson(loan);
 
-        editor.putString("My Savings", jsonSavings);
+        editor.putString("My Loans", jsonLoans);
 
         editor.apply();
     }

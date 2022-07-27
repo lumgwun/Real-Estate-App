@@ -8,19 +8,56 @@
     tools:context="com.ls.awajimatradeeder.EstateProperty.PropertyAct">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Property Dashboard"
-        android:textSize="50sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+        android:gravity="center_horizontal"
+        android:id="@+id/propT"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/prop_recyclerview"
+        android:layout_below="@id/propT"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"/>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:id="@+id/activity_recyclerview_nsv"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="100dp"
+
+        app:behavior_hideable="true"
+
+        app:behavior_peekHeight="1dp"
+
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/act_prop_delete"
+
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_layer"
+
+            android:layout_height="wrap_content"
+
+            android:text="Delete"/>
+
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navProperty"
+        android:id="@+id/bottom_navP"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@color/teal_700"
+        app:itemBackground="@color/purple_new"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/prop_menu" />

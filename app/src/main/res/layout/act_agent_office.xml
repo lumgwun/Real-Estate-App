@@ -20,10 +20,11 @@
         android:id="@+id/bottom_agent_prop"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:paddingBottom="5dp"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/purple_new"
         app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
+        app:itemTextColor="@color/white"
         app:menu="@menu/prop_agent_menu" />
 
 </RelativeLayout>

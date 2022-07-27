@@ -14,4 +14,9 @@
         android:title="Agent Back Office"
         android:icon="@drawable/icon5_fg"/>
 
+    <item
+        android:id="@+id/genHome"
+        android:title="User Home"
+        android:icon="@drawable/icon5_fg"/>
+
 </menu>

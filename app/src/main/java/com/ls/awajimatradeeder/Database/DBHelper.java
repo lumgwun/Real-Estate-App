@@ -12,18 +12,19 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.location.Location;
 import android.net.Uri;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.ls.awajimatradeeder.Classes.Account;
 import com.ls.awajimatradeeder.Classes.Birthday;
+import com.ls.awajimatradeeder.Classes.Estate;
 import com.ls.awajimatradeeder.Classes.Profile;
 import com.ls.awajimatradeeder.Classes.SOrder;
 import com.ls.awajimatradeeder.Classes.SupportMessage;
 import com.ls.awajimatradeeder.Classes.TimeLine;
+
+import org.w3c.dom.Comment;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -37,13 +38,10 @@ import java.util.List;
 
 import static com.ls.awajimatradeeder.Classes.Account.ACCOUNTS_TABLE;
 import static com.ls.awajimatradeeder.Classes.Account.ACCOUNT_BALANCE;
-import static com.ls.awajimatradeeder.Classes.Account.ACCOUNT_BANK;
 import static com.ls.awajimatradeeder.Classes.Account.ACCOUNT_NAME;
 import static com.ls.awajimatradeeder.Classes.Account.ACCOUNT_NO;
 import static com.ls.awajimatradeeder.Classes.Account.ACCOUNT_PROF_ID;
-import static com.ls.awajimatradeeder.Classes.Account.ACCOUNT_TYPE;
 import static com.ls.awajimatradeeder.Classes.Account.ACCOUNT_TYPES_TABLE;
-import static com.ls.awajimatradeeder.Classes.Account.BANK_ACCT_NO;
 import static com.ls.awajimatradeeder.Classes.Account.CREATE_ACCOUNTS_TABLE;
 import static com.ls.awajimatradeeder.Classes.Account.CREATE_ACCOUNT_TYPE_TABLE;
 import static com.ls.awajimatradeeder.Classes.Birthday.BIRTHDAY_DAYS_BTWN;
@@ -58,6 +56,20 @@ import static com.ls.awajimatradeeder.Classes.Birthday.B_PHONE;
 import static com.ls.awajimatradeeder.Classes.Birthday.B_PROF_ID;
 import static com.ls.awajimatradeeder.Classes.Birthday.B_SURNAME;
 import static com.ls.awajimatradeeder.Classes.Birthday.CREATE_BIRTHDAY_TABLE;
+import static com.ls.awajimatradeeder.Classes.Estate.CREATE_ESTATE_TABLE;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_ADDRESS;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_COUNTRY;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_DESC;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_ID;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_LATLNG;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_LOCALITY;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_LOGO;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_NAME;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_PROFILEID;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_STATE;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_STATUS;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_SUPERADMIN_ID;
+import static com.ls.awajimatradeeder.Classes.Estate.ESTATE_TABLE;
 import static com.ls.awajimatradeeder.Classes.MTradeAccount.CREATE_MTRADE_ACCT_TABLE;
 import static com.ls.awajimatradeeder.Classes.MTradeAccount.MTRADE_ACCT_ACCT_ID;
 import static com.ls.awajimatradeeder.Classes.MTradeAccount.MTRADE_ACCT_BALANCE;
@@ -126,7 +138,6 @@ import static com.ls.awajimatradeeder.Classes.SupportMessage.MESSAGE_TIME;
 import static com.ls.awajimatradeeder.Classes.SupportMessage.MESSAGE_VIEWED;
 import static com.ls.awajimatradeeder.Classes.TimeLine.CREATE_TIMELINE_TABLE;
 import static com.ls.awajimatradeeder.Classes.TimeLine.TIMELINE_DETAILS;
-import static com.ls.awajimatradeeder.Classes.TimeLine.TIMELINE_ID;
 import static com.ls.awajimatradeeder.Classes.TimeLine.TIMELINE_PROF_ID;
 import static com.ls.awajimatradeeder.Classes.TimeLine.TIMELINE_TABLE;
 import static com.ls.awajimatradeeder.Classes.TimeLine.TIMELINE_TIME;
@@ -186,6 +197,7 @@ public class DBHelper extends SQLiteOpenHelper {
             sqLiteDatabase.execSQL(CREATE_SO_ACCT_TABLE);
             sqLiteDatabase.execSQL(CREATE_TIMELINE_TABLE);
             sqLiteDatabase.execSQL(CREATE_FUNDING_TABLE);
+            sqLiteDatabase.execSQL(CREATE_ESTATE_TABLE);
             sqLiteDatabase.setTransactionSuccessful();
         } catch (SQLiteException e) {
             e.printStackTrace();
@@ -217,6 +229,7 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + SO_ACCT_TABLE);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TIMELINE_TABLE);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + FUNDING_TABLE);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + ESTATE_TABLE);
 
         onCreate(sqLiteDatabase);
 
@@ -314,6 +327,137 @@ public class DBHelper extends SQLiteOpenHelper {
             }
         }
 
+    }
+    public Estate createEstate(Estate estate) {
+        ContentValues values = new ContentValues();
+        String[] columns = {ESTATE_ID,ESTATE_SUPERADMIN_ID,ESTATE_NAME,ESTATE_LOCALITY};
+        int estateID=estate.getEstateID();
+        int estateProfID=estate.getEstateProfileID();
+        int estateSuperAdminID=estate.getEstateSuperAdminID();
+        String estateName=estate.getEstateName();
+        String estateCountry=estate.getEstateCountry();
+        String estateAddress=estate.getEstateAddress();
+        String estateLocality=estate.getEstateLocality();
+        String estateState=estate.getEstateState();
+        String estateStatus=estate.getEstateStatus();
+        String estateLatLng= String.valueOf(estate.getEstateLatLng());
+        String estateLogo=estate.getEstateLogo();
+        String estateDesc=estate.getEstateDescp();
+        SQLiteDatabase database = this.getReadableDatabase();
+        values.put(ESTATE_ID, estateID);
+        values.put(ESTATE_PROFILEID, estateProfID);
+        values.put(ESTATE_SUPERADMIN_ID, estateSuperAdminID);
+        values.put(ESTATE_NAME, estateName);
+        values.put(ESTATE_ADDRESS, estateAddress);
+        values.put(ESTATE_DESC, estateDesc);
+        values.put(ESTATE_LOCALITY, estateLocality);
+        values.put(ESTATE_STATE, estateState);
+        values.put(ESTATE_LATLNG, estateLatLng);
+        values.put(ESTATE_COUNTRY, estateCountry);
+        values.put(ESTATE_STATUS, estateStatus);
+        values.put(ESTATE_LOGO, String.valueOf(estateLogo));
+
+        long insertId = database.insert(ESTATE_TABLE, null,
+                values);
+        Cursor cursor = database.query(ESTATE_TABLE,
+                columns, ESTATE_ID + " = " + insertId, null,
+                null, null, null);
+        cursor.moveToFirst();
+        Estate newEstate = cursorToEstate(cursor);
+        cursor.close();
+        return newEstate;
+    }
+
+    public void deleteEstate(Estate estate) {
+        int id = estate.getEstateID();
+        SQLiteDatabase database = this.getReadableDatabase();
+        System.out.println("Estate deleted with id: " + id);
+        database.delete(ESTATE_TABLE, ESTATE_ID
+                + " = " + id, null);
+    }
+
+    public ArrayList<Estate> getAllEstates() {
+        SQLiteDatabase database = this.getReadableDatabase();
+        String[] columns = {ESTATE_ID,ESTATE_SUPERADMIN_ID,ESTATE_NAME,ESTATE_LOCALITY,ESTATE_STATE,ESTATE_DESC,ESTATE_COUNTRY,ESTATE_LATLNG,ESTATE_STATUS,ESTATE_PROFILEID,ESTATE_LOGO};
+        ArrayList<Estate> estateArrayList = new ArrayList<Estate>();
+        Cursor cursor = database.query(ESTATE_TABLE,
+                columns, null, null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Estate estate = cursorToEstate(cursor);
+            estateArrayList.add(estate);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return estateArrayList;
+    }
+    public ArrayList<Estate> getAllProfileEstates(int profileID) {
+        SQLiteDatabase database = this.getReadableDatabase();
+        String selection = ESTATE_PROFILEID + "=?";
+        String[] selectionArgs = new String[]{valueOf(profileID)};
+        String[] columns = {ESTATE_ID,ESTATE_SUPERADMIN_ID,ESTATE_NAME,ESTATE_LOCALITY,ESTATE_DESC,ESTATE_STATE,ESTATE_COUNTRY,ESTATE_LATLNG,ESTATE_STATUS,ESTATE_PROFILEID,ESTATE_LOGO};
+        ArrayList<Estate> estateArrayList = new ArrayList<Estate>();
+        Cursor cursor = database.query(ESTATE_TABLE,
+                columns, selection, selectionArgs, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Estate estate = cursorToEstate(cursor);
+            estateArrayList.add(estate);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return estateArrayList;
+    }
+    public ArrayList<Estate> getAllStateEstates(String state) {
+        SQLiteDatabase database = this.getReadableDatabase();
+        String selection = ESTATE_STATE + "=?";
+        String[] selectionArgs = new String[]{valueOf(state)};
+        String[] columns = {ESTATE_ID,ESTATE_SUPERADMIN_ID,ESTATE_NAME,ESTATE_LOCALITY,ESTATE_DESC,ESTATE_STATE,ESTATE_COUNTRY,ESTATE_LATLNG,ESTATE_STATUS,ESTATE_PROFILEID,ESTATE_LOGO};
+        ArrayList<Estate> estateArrayList = new ArrayList<Estate>();
+        Cursor cursor = database.query(ESTATE_TABLE,
+                columns, selection, selectionArgs, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Estate estate = cursorToEstate(cursor);
+            estateArrayList.add(estate);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return estateArrayList;
+    }
+    public ArrayList<Estate> getAllLocalityEstates(String locality) {
+        SQLiteDatabase database = this.getReadableDatabase();
+        String selection = ESTATE_LOCALITY + "=?";
+        String[] selectionArgs = new String[]{valueOf(locality)};
+        String[] columns = {ESTATE_ID,ESTATE_SUPERADMIN_ID,ESTATE_NAME,ESTATE_LOCALITY,ESTATE_DESC,ESTATE_STATE,ESTATE_COUNTRY,ESTATE_LATLNG,ESTATE_STATUS,ESTATE_PROFILEID,ESTATE_LOGO};
+        ArrayList<Estate> arrayList = new ArrayList<Estate>();
+        Cursor cursor = database.query(ESTATE_TABLE,
+                columns, selection, selectionArgs, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Estate estate = cursorToEstate(cursor);
+            arrayList.add(estate);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return arrayList;
+    }
+
+    private Estate cursorToEstate(Cursor cursor) {
+        Estate estate = new Estate();
+        estate.setEstateID(cursor.getInt(0));
+        estate.setEstateSuperAdminID(cursor.getInt(1));
+        estate.setEstateName(cursor.getString(2));
+        estate.setEstateAddress(cursor.getString(3));
+        estate.setEstateLocality(cursor.getString(4));
+        estate.setEstateState(cursor.getString(5));
+        estate.setEstateCountry(cursor.getString(6));
+        estate.setEstateLatLng(cursor.getString(7));
+        estate.setEstateStatus(cursor.getString(8));
+        estate.setEstateProfileID(cursor.getInt(9));
+        estate.setEstateLogo(cursor.getString(10));
+        estate.setEstateDescp(cursor.getString(11));
+        return estate;
     }
 
     public String getProfileRoleByUserNameAndPassword(String username,String password) {

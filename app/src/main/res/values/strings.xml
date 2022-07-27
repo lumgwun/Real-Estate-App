@@ -7,6 +7,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
 
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="duration_minutes_shortest">%1$d m</string>
+    <string name="duration_hours_shortest">%1$d h</string>
+    <string name="duration_days_shortest">%1$d d</string>
+    <string name="duration_week_shortest">%1$d w</string>
 
     <string name="date_today">Date today</string>
 
@@ -124,6 +128,13 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="now">now</string>
+    <string name="pref_theme_Uyeada">Uyeada</string>
+    <string name="pref_theme_Ekede">Ekede</string>
+    <string name="pref_theme_key_okoroete">Okoroete</string>
+    <string name="pref_theme_key_Akwut_Obolo">Akwut Obolo</string>
+    <string name="pref_theme_key_Oro">Oro</string>
+    <string name="pref_theme_key_elokpon">Elokpon</string>
 
 
 </resources>

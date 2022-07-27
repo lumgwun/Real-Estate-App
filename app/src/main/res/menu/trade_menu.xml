@@ -12,6 +12,6 @@
     <item
         android:id="@+id/trader"
         android:title="Trader"
-        android:icon="@drawable/new_fg"/>
+        android:icon="@drawable/user1"/>
 
 </menu>

@@ -113,7 +113,7 @@
                 <group android:checkableBehavior="single">
                     <item
                         android:id="@+id/admin_prop_support"
-                        android:icon="@drawable/ic_dashboard_black_24dp"
+                        android:icon="@drawable/selector"
                         android:title="Support" />
 
                 </group>

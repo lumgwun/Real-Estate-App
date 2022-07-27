@@ -39,12 +39,15 @@ import android.location.LocationRequest;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Parcelable;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -104,6 +107,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Random;
+import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -180,7 +184,7 @@ public class SignUpAct extends AppCompatActivity {
     int virtualAccountNumber, soAccountNumber;
     int profileID1;
 
-    AppCompatSpinner spnState, office, spnGender,spnCountry;
+    AppCompatSpinner spnState, office, spnGender, spnCountry;
     DBHelper dbHelper;
     Profile managerProfile;
 
@@ -193,8 +197,8 @@ public class SignUpAct extends AppCompatActivity {
     Date date;
     Gson gson, gson1;
     String json, json1, nIN;
-    Profile userProfile,  lastProfileUsed;
-    String  officePref;
+    Profile userProfile, lastProfileUsed;
+    String officePref;
 
     private String picturePath;
     private static final int RESULT_LOAD_IMAGE = 1;
@@ -244,12 +248,12 @@ public class SignUpAct extends AppCompatActivity {
     private Calendar cal;
     private static boolean isPersistenceEnabled = false;
     private Account account;
-    private SOrderAcct standingOrderAcct,soAcct;
+    private SOrderAcct standingOrderAcct, soAcct;
     private FusedLocationProviderClient fusedLocationClient;
     private TimeLine timeLine;
     String joinedDate, profileName;
     String code;
-    Profile userProfile1,userProfile2;
+    Profile userProfile1, userProfile2;
     private static final int REQUEST_CHECK_SETTINGS = 1000;
     private String mVerificationId;
     double lat, lng;
@@ -284,13 +288,14 @@ public class SignUpAct extends AppCompatActivity {
     //RoomController mRoomDB;
 
     private String bankAcctNumber;
-    private AppCompatActivity SignUpAct ;
+    private AppCompatActivity SignUpAct;
     PinEntryView edtCode;
     private CardView cardState;
     private AppCompatTextView txtState;
 
 
     private static final String PREF_NAME = "Tradeeder";
+    private boolean currentlyTracking;
     private LocationManager locationManager;
     String regEx =
             "^(([w-]+.)+[w-]+|([a-zA-Z]{1}|[w-]{2,}))@"
@@ -303,7 +308,8 @@ public class SignUpAct extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     SupportMapFragment mapFrag;
-    char[] otp;;
+    char[] otp;
+    ;
     int PERMISSION_ALL = 1;
     String[] PERMISSIONS = {
             Manifest.permission.CAMERA,
@@ -385,6 +391,39 @@ public class SignUpAct extends AppCompatActivity {
                     }
                 }
             });
+
+
+    public static String getDeviceId(Context context) {
+        @SuppressLint("HardwareIds") final String deviceId = ((TelephonyManager) context
+                .getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
+        if (deviceId != null) {
+            return deviceId;
+        } else {
+            return Build.SERIAL;
+        }
+    }
+
+    @SuppressLint("HardwareIds")
+    public String getDeviceUUID(Context context) {
+        final TelephonyManager tm = (TelephonyManager) context
+                .getSystemService(Context.TELEPHONY_SERVICE);
+
+        final String tmDevice, tmSerial, androidId;
+        tmDevice = "" + tm.getDeviceId();
+        tmSerial = "" + tm.getSimSerialNumber();
+        androidId = "" + Settings.Secure.getString(context.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_NUMBERS) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            //return TODO;
+        }
+        String deviceMobileNo = tm.getLine1Number();
+
+        UUID deviceUuid = new UUID(androidId.hashCode(),
+                ((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
+        return deviceUuid.toString();
+
+    }
 
 
     @Override
@@ -506,6 +545,15 @@ public class SignUpAct extends AppCompatActivity {
         json = userPreferences.getString("LastProfileUsed", "");
         managerProfile = gson.fromJson(json, Profile.class);
         json1 = userPreferences.getString("LastTellerProfileUsed", "");
+        currentlyTracking = userPreferences.getBoolean("currentlyTracking", false);
+
+        boolean firstTimeLoadingApp = userPreferences.getBoolean("firstTimeLoadingApp", true);
+        if (firstTimeLoadingApp) {
+            SharedPreferences.Editor editor = userPreferences.edit();
+            editor.putBoolean("firstTimeLoadingApp", false);
+            editor.putString("deviceID", com.ls.awajimatradeeder.SignUpAct.getDeviceId(this));
+            editor.apply();
+        }
 
 
         cal = Calendar.getInstance();

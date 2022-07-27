@@ -22,6 +22,9 @@ public class Property implements Serializable, Parcelable {
     private Property propProperty;
     private boolean isEstateProp;
     private ArrayList<PropertyPicture> propertyPictures;
+    private String propertyTittle;
+    private String propertyDesc;
+    private String propertyCurrency;
 
     public Property() {
         super();
@@ -58,6 +61,17 @@ public class Property implements Serializable, Parcelable {
     public Property(Property property1) {
         this.propProperty=property1;
 
+    }
+
+    public Property(int propPicture, String type, String tittle, String desc, String town, String state, String price, String priceDuration) {
+        this.propertyPicture = Uri.parse(String.valueOf(propPicture));
+        this.propertyType = type;
+        this.propertyTittle = tittle;
+        this.propertyDesc = desc;
+        this.propertyTown = town;
+        this.propertyState = state;
+        this.propertyPrice = Double.parseDouble(price);
+        this.propertyPriceDuration = priceDuration;
     }
 
     public int getPropertyID() {
@@ -183,5 +197,30 @@ public class Property implements Serializable, Parcelable {
         parcel.writeString(propertyPriceDuration);
         parcel.writeString(propertyStatus);
         parcel.writeByte((byte) (isEstateProp ? 1 : 0));
+    }
+
+    public String getPropertyTittle() {
+
+        return propertyTittle;
+    }
+
+    public void setPropertyTittle(String propertyTittle) {
+        this.propertyTittle = propertyTittle;
+    }
+
+    public String getPropertyDesc() {
+        return propertyDesc;
+    }
+
+    public void setPropertyDesc(String propertyDesc) {
+        this.propertyDesc = propertyDesc;
+    }
+
+    public String getPropertyCurrency() {
+        return propertyCurrency;
+    }
+
+    public void setPropertyCurrency(String propertyCurrency) {
+        this.propertyCurrency = propertyCurrency;
     }
 }

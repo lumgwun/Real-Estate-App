@@ -70,8 +70,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation platform('com.google.firebase:firebase-bom:29.3.1')
-    implementation 'com.google.firebase:firebase-analytics'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
@@ -102,12 +100,12 @@ dependencies {
     implementation 'io.paperdb:paperdb:2.6'
     implementation 'com.github.florent37:shapeofview:1.3.2'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.huang.rippleview:rippleview:1.0.1'
-    implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.1'
-    implementation 'com.shuhart.stepview:stepview:1.5.0'
+    //implementation 'com.huang.rippleview:rippleview:1.0.1'
+    //implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.1'
+    //implementation 'com.shuhart.stepview:stepview:1.5.0'
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 
-    implementation group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+    //implementation group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
     //implementation 'com.github.aabhasr1:OtpView:v1.1.2'
     implementation ('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
         // Exclude is only needed if you already have
@@ -118,7 +116,7 @@ dependencies {
     //implementation 'com.github.Flutterwave:rave-android:1.0.49.1'
     //implementation 'com.github.Flutterwave.rave-android:rave_presentation:2.1.38'
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.github.jd-alexander:library:1.1.0'
+    //implementation 'com.github.jd-alexander:library:1.1.0'
     implementation 'com.klinkerapps:android-smsmms:5.2.6'
     implementation 'com.wang.avi:library:1.0.5'
     implementation 'com.rom4ek:arcnavigationview:2.0.0'
@@ -153,6 +151,12 @@ dependencies {
         implementation 'com.github.clans:fab:1.6.4'
     }
 
+   /* implementation ('com.payclip.sdk:plus-reader:1.3.0'){
+        exclude group: 'commons-lang', module: 'commons-lang'
+        //replacedBy 'org.apache.commons:commons-lang3', 'Use commons-lang3 instead of commons-lang'
+    }*/
+
+
 
     implementation 'com.wang.avi:library:1.0.5'
 
@@ -175,8 +179,8 @@ dependencies {
     //implementation group: "com.twilio.sdk", name: "twilio", version: "8.29.0"
     //implementation group: "com.twilio.sdk", name: "twilio", version: '8.25.0'
     implementation group: "com.twilio.sdk", name: "twilio", version: '8.22.0'
-    implementation 'com.google.firebase:firebase-crashlytics:18.2.11'
-    implementation 'com.google.firebase:firebase-dynamic-links'
+    //implementation 'com.google.firebase:firebase-crashlytics:18.2.11'
+    //implementation 'com.google.firebase:firebase-dynamic-links'
     implementation 'com.google.android.gms:play-services-safetynet:18.0.1'
     implementation 'com.google.maps:google-maps-services:2.0.0'
     implementation 'org.slf4j:slf4j-simple:1.7.25'
@@ -214,8 +218,7 @@ dependencies {
     implementation 'com.rom4ek:arcnavigationview:2.0.0'
     implementation 'com.mig35:carousellayoutmanager:1.4.6'
     implementation 'co.paystack.android:paystack:3.1.3'
-
-
+    
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'com.github.bumptech.glide:annotations:4.12.0'
 
@@ -280,6 +283,23 @@ dependencies {
     implementation 'com.github.joielechong:countrycodepicker:2.1.5'
     implementation 'com.github.joielechong:countrycodepicker:2.4.2'
     implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    implementation 'com.squareup.retrofit2:converter-simplexml:2.1.0'
+
+    implementation 'com.squareup.retrofit2:converter-wire:2.1.0'
+
+    implementation 'com.squareup.retrofit2:converter-protobuf:2.1.0'
+
+    implementation 'com.squareup.retrofit2:converter-jackson:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.1.0'
+    //implementation 'com.karumi:dexter:5.0.0'
+    //implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    //implementation 'com.google.firebase:firebase-analytics'
+
+
 
 
 

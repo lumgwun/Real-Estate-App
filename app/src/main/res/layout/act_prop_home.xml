@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    tools:context="com.ls.awajimatradeeder.EstateProperty.PropHomeAct">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:id="@+id/sliderTittle"
+            android:layout_marginBottom="10dp"
+            android:text="Available Estates"
+            android:layout_height="wrap_content"/>
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/sliderAvailEstates"
+            android:layout_below="@id/sliderTittle"
+            android:background="@drawable/estate2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="@android:color/black"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:id="@+id/sliderTittle33"
+            android:layout_marginBottom="10dp"
+            android:text="Other Properties"
+            android:layout_height="wrap_content"/>
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/sliderOtherProp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/sliderTittle33"
+            android:background="@drawable/estate2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="@android:color/black"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:id="@+id/myPropTxt"
+            android:layout_marginBottom="10dp"
+            android:text="My Properties"
+            android:layout_height="wrap_content"/>
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/sliderMyProp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/sliderTittle33"
+            android:background="@drawable/estate2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="@android:color/black"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1" />
+
+        <include layout="@layout/prop_sheet_dialog"/>
+        <include layout="@layout/est_bsheet_dialog"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navProperty"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            app:itemBackground="@color/purple_new"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/prop_menu" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</ScrollView>
+

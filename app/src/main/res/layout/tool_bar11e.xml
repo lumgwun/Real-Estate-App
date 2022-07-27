@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:textStyle="bold"
                 app:title="Skylight Coop. App"
-                android:background="@drawable/rect_their_message"
+                android:background="@drawable/shape_layer_3b"
                 android:layout_marginEnd="10dp"
                 app:titleMarginStart="40dp"
                 android:foregroundGravity="center_horizontal"

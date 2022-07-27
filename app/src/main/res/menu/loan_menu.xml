@@ -12,6 +12,6 @@
     <item
         android:id="@+id/newLoan"
         android:title="Request a New Loan"
-        android:icon="@drawable/new1_fg"/>
+        android:icon="@drawable/icon1_fg"/>
 
 </menu>

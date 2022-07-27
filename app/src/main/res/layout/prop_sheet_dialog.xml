@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_peekHeight="352dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:background="@drawable/shape_layer_3b"
+    tools:context="com.ls.awajimatradeeder.EstateProperty.PropHomeAct">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/myPropPics_Layout"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected Property Pictures"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/sliderMyProps"
+                android:background="@drawable/rect55"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_centerInParent="true"
+                app:sliderAnimationDuration="600"
+                android:layout_marginBottom="10dp"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="@android:color/black"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:text="Checkout"
+                    android:layout_weight="1"
+                    android:onClick="propCheckOut"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/propCheckout"
+                    android:background="@drawable/rect_white"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:text="Delete"
+                    android:visibility="gone"
+                    android:onClick="propDelete"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:id="@+id/propDelete"
+                    android:background="@drawable/rect_white"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:text="Share"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:onClick="propShare"
+                    android:id="@+id/propShare"
+                    android:background="@drawable/rect_white"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp"
+            android:id="@+id/otherPropCard"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_layer_3b"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tx_text_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:background="@null"
+                    android:text="Other Properties in this Area" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewPropOther"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clipToPadding="false"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="5dp"
+                    android:foregroundGravity="center"
+                    android:orientation="horizontal" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

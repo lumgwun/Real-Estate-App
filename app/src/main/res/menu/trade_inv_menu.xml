@@ -20,6 +20,6 @@
     <item
         android:id="@+id/tradeTranx"
         android:title="Transactions"
-        android:icon="@drawable/new_fg"/>
+        android:icon="@drawable/fab_add"/>
 
 </menu>

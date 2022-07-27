@@ -66,6 +66,7 @@ public class Account implements Serializable, Parcelable {
     private BigDecimal balance1 = null;
     private BigDecimal interestRate = BigDecimal.ZERO;
     private ArrayList<Transaction> transactions;
+    private ArrayList<AcctFXAct> acctFXActArrayList;
     private int id_For_BigDecimal = -1;
     private int type_BigDecimal = -1;
 
@@ -205,5 +206,13 @@ public class Account implements Serializable, Parcelable {
 
     public void setAccountIBAN(String accountIBAN) {
         this.accountIBAN = accountIBAN;
+    }
+
+    public ArrayList<AcctFXAct> getAcctFXActArrayList() {
+        return acctFXActArrayList;
+    }
+
+    public void setAcctFXActArrayList(ArrayList<AcctFXAct> acctFXActArrayList) {
+        this.acctFXActArrayList = acctFXActArrayList;
     }
 }
